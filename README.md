@@ -11,6 +11,7 @@ npx tsc --init
 npm i -D gts
 npx gts init
 npm i -D parcel
+npm i -D npm-check-updates
 
 npm i rxjs
 npm i showdown
@@ -64,3 +65,11 @@ python3 -m pip install "fastapi[all]" "uvicorn[standard]" httpx
 ```
 
 Fix `python.defaultInterpreterPath` in `.vscode/settings.json`.
+
+## Setup after using the github template
+
+```bash
+make install-env
+```
+
+Optional: Consider running `make update-env` too.
