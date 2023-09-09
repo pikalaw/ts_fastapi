@@ -2,7 +2,7 @@
 
 Template for TypeScript frontend and Python's FastAPI backend
 
-## Client-side setup
+## Client setup
 
 ```sh
 npm init
@@ -13,6 +13,8 @@ npx gts init
 npm i -D parcel
 
 npm i rxjs
+npm i showdown
+npm i -D @types/showdown
 ```
 
 Add these to `package.json`:
@@ -20,7 +22,7 @@ Add these to `package.json`:
 ```json
   "source": "template/index.html",
   "scripts": {
-    "start": "npx parcel",
+    "start": "npx parcel -p 8000",
   },
   "type": "module",
 ```
@@ -39,7 +41,7 @@ Change these in `tsconfig.json`:
     "inlineSources": true,
     "experimentalDecorators": true,
   },
-  "include": ["src/**/*.ts"],
+  "include": ["script/**/*.ts"],
   "exclude": ["node_modules"],
 ```
 
@@ -47,4 +49,18 @@ Renaming `.prettierrc.js` to `.prettierrc.cjs`, because Prettier cannot import E
 
 Renaming `/src/` to `/script/`.
 
-## Server-side setup
+## Server setup
+
+```bash
+# Setup environment.
+python3 -m venv venv
+source venv/bin/activate
+
+# mypy.
+python3 -m pip install mypy
+
+# FastAPI.
+python3 -m pip install "fastapi[all]" "uvicorn[standard]" httpx
+```
+
+Fix `python.defaultInterpreterPath` in `.vscode/settings.json`.

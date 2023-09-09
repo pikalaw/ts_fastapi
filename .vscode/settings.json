@@ -1,0 +1,6 @@
+{
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.autopep8"
+  },
+  "python.defaultInterpreterPath": "/usr/local/google/home/ltsang/Projects/ts_fastapi/venv/bin/python"
+}

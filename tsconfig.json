@@ -4,14 +4,14 @@
     "rootDir": ".",
     "target": "esnext",
     "lib": ["dom"],
-    "module": "esnext",
+    "module": "nodenext",
     "moduleResolution": "nodenext",
     "outDir": "script",
     "inlineSources": true,
     "experimentalDecorators": true,
   },
   "include": [
-    "src/**/*.ts",
+    "script/**/*.ts",
     "test/**/*.ts"
   ],
   "exclude": ["node_modules"]
