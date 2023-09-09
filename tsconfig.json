@@ -6,7 +6,7 @@
     "lib": ["dom"],
     "module": "nodenext",
     "moduleResolution": "nodenext",
-    "outDir": "script",
+    "outDir": "out",
     "inlineSources": true,
     "experimentalDecorators": true,
   },

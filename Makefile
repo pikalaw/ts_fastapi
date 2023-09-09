@@ -34,14 +34,16 @@ update-env: update-env-client update-env-server
 
 update-env-client:
 	npx ncu --upgrade
-  npm i
+	npm i
 
 update-env-python-path:
-  python_path=$(which python3) \
-  sed -i "s/python_path/${python_path}/g" .vscode/settings.json
+	python_path=$(which python3) \
+	sed -i "s/python_path/${python_path}/g" .vscode/settings.json
 
 update-env-server:
 	python3 -m pip install -r requirements.txt --upgrade
 
 clean:
 	rm -rf __pycache__
+	rm -rf .parcel-cache
+  rm -rf dist
