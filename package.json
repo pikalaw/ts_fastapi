@@ -1,0 +1,29 @@
+{
+  "name": "ts_fastapi",
+  "version": "1.0.0",
+  "description": "Template for TypeScript frontend and Python's FastAPI backend",
+  "source": "template/index.html",
+  "scripts": {
+    "start": "npx parcel",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "gts lint",
+    "clean": "gts clean",
+    "compile": "tsc",
+    "fix": "gts fix",
+    "prepare": "npm run compile",
+    "pretest": "npm run compile",
+    "posttest": "npm run lint"
+  },
+  "type": "module",
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "20.4.6",
+    "gts": "^5.0.1",
+    "parcel": "^2.9.3",
+    "typescript": "~5.1.6"
+  },
+  "dependencies": {
+    "rxjs": "^7.8.1"
+  }
+}
