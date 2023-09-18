@@ -2,7 +2,7 @@ start:
 	uvicorn server:app --app-dir src --reload --port 8001
 
 check_type:
-	mypy --strict --exclude /venv/ src/server.py
+	mypy
 
 unittest:
 	python3 -m unittest discover
