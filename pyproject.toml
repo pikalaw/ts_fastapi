@@ -2,8 +2,5 @@
 plugins = "pydantic.mypy"
 strict = true
 files = [
-    "src/**/*.py",
-]
-exclude = [
-    "/venv"
+    "api/server.py",
 ]

@@ -1,5 +1,5 @@
 start:
-	uvicorn server:app --app-dir src --reload --port 8001
+	uvicorn api.server:app --reload --port 8001
 
 check_type:
 	mypy
